@@ -23,19 +23,7 @@ application status, and coordinate the processing of farmer requests.
 
 ## Problem Statement
 
-Farmers often have to go through multiple manual steps to access
-agricultural procurement services, including registration, document
-verification, eligibility checking, appointment management, and
-application processing. Lack of centralized information and real-time
-communication can result in unnecessary delays, repeated visits,
-increased paperwork, and difficulty tracking application progress.
-
-At the procurement-center level, managing farmer applications and
-processing workloads manually can make it difficult to maintain an
-organized workflow and identify increasing demand or potential
-bottlenecks. A connected digital system is therefore required to
-streamline the complete process while providing farmers and
-procurement-center personnel with consistent, up-to-date information.
+Farmers often face long waiting times, lack of information regarding procurement schedules and uncertainty about procurement status.
 
 ## Proposed Solution
 
