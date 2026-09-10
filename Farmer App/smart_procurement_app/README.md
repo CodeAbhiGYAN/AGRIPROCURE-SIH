@@ -1,41 +1,79 @@
-# Smart Procurement — Flutter Prototype
+# Farmer App
 
-A farmer-first Smart India Hackathon prototype for dynamic procurement scheduling and network-wide load balancing.
+A Flutter-based mobile application designed to help farmers access
+and manage agricultural procurement services through a single digital platform.
 
-## Run
-1. Install Flutter.
-2. Run `flutter pub get`.
-3. Run `flutter run`.
+## Overview
 
-This prototype works **without Firebase/API keys** using realistic mock data, so the demo can be shown immediately.
+The Farmer App provides farmers with a simple platform to register,
+verify their details, submit required information, check eligibility, request slot for procurement 
+and track the progress of their procurement applications.
 
-## Demo
-- Open Farmer mode.
-- Registration/verification is mocked.
-- The system assigns a day/window and best centre automatically.
-- Live queue and leave-time are calculated from mock conditions.
-- Open Admin mode.
-- Trigger **Centre A equipment failure**.
-- Farmers who have not left are automatically reassigned to B/C.
-- The farmer view and notification feed update immediately.
+## Objectives
 
-## Replacing mocks later
-All external integrations are isolated:
-- `services/auth_service.dart`
-- `services/verification_service.dart`
-- `services/queue_service.dart`
-- `services/maps_service.dart`
-- `services/weather_service.dart`
-- `services/notification_service.dart`
-- `services/ai_service.dart`
-- `services/data_service.dart`
+- Simplify access to agricultural procurement services
+- Reduce unnecessary visits
+- Provide transparent application tracking
+- Make verification and eligibility information easily accessible
 
-The allocation/priority/reassignment logic is isolated under `scheduling/`.
-No Aadhaar, bank credentials, Firebase credentials, or API keys are hard-coded.
+## Key Features
 
-## Production roadmap
-- Add Firebase Authentication + Firestore + Cloud Functions + FCM.
-- Move authoritative allocation/reassignment decisions to Cloud Functions/Python.
-- Connect authorized government verification APIs.
-- Connect Google Routes/Maps and a weather provider.
-- Add secure server-side AI retrieval/tooling.
+1. Registration
+Farmers can register through their Aadhar card number (to make every registration safe and unique).
+
+2. Verification
+The application guides the farmer through the verification process
+and displays the current verification status.
+
+3. Land Records
+APP Shows Farmer Their land records via Fetching Its Details Through Government Database.
+
+4. Eligibility Check
+The app allows farmers to check whether they meet the requirements
+for the Procurement Service.
+
+5. Application Status
+Farmers can track the current status of their submitted procurement application.
+
+6. Appointment
+Farmers get automatically scheduled slot for their procurement request. 
+
+7. Notifications
+Important updates and status changes are communicated to the farmer.
+
+## Application Workflow
+
+Registration
+    ↓
+Verification
+    ↓
+Land Record Verification
+    ↓
+Eligibility Check
+    ↓
+Application Submission
+    ↓
+Appointment / Further Processing
+    ↓
+Application Status & Updates
+
+## Technology Stack
+
+- Flutter
+- Dart
+- SupaBase
+- PostgreSQL
+- APIs: SUPABASE API, OSRM ROUTING API, OpenStreetMap, Android Notification API
+
+## Project Structure
+
+```text
+Farmer App/
+├── android/
+├── ios/
+├── web/
+├── lib/
+│   ├── ...
+├── assets/
+├── pubspec.yaml
+└── README.md
